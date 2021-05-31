@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<title>甜城志愿网登录页</title>
+<link rel="stylesheet" th:href="@{css/login_style.css}">
+</head>
+
+<body>
+    <div class="content">
+        <form class="form sign-in" th:object="${user}" th:action="@{/logincheck}" method="post">
+            <h2 alertInfo(${msg})>欢迎回来</h2>
+            <label>
+                <span>用户名</span>
+                <input type="text" id="loginName" name="loginName" placeholder="填写你的用户名" required autofocus  />
+            </label>
+            <label>
+                <span>密码</span>
+                <input type="password" id="loginPwd" name="loginPassword" placeholder="Passwrod" required />
+            </label>
+            <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
+            <button type="submit" class="submit">登 录</button>
+            <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button>
+        </form>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现大量机会！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <form th:action="@{/registercheck}" method="post" th:object="${user}" class="form sign-up">
+                <h2>立即注册</h2>
+                <label>
+                    <span>用户名</span>
+                    <input type="username" id="username"  name="username"  required autofocus/>
+                </label>
+
+                <label>
+                    <span>密码</span>
+                    <input type="password" id="password" name="password" placeholder="Passwrod" required />
+                </label>
+<!--                <button type="button" class="submit" th:action="@{/registercheck}">注 册</button>-->
+                <button type="submit" class="submit" value="注册">注册</button>
+                <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号注册</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.content').classList.toggle('s--signup')
+        })
+
+    </script>
+</body>
+
+</html>

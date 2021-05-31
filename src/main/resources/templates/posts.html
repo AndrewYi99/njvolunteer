@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 站点头图 -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-ico" th:href="@{sources/images/heart_48x48.png}"></link>
+        <link rel="stylesheet" th:href="@{lib/css/bootstrap.css}">
+        <link rel="stylesheet" th:href="@{css/home.css}">
+        <link rel="stylesheet" th:href="@{css/posts.css}">
+        <title>文章页</title>
+    </head>
+    <body>
+        <!--  引用公共头部-->
+        <div th:replace="common :: header_top"></div>
+        <!-- 引用公共导航栏 -->
+        <div th:replace="common :: header_nav"></div>
+<!--        文章内容-->
+        <section class="post-details-area">
+            <div class="container">
+                <div class="post-details row posts-border">
+                    <div class="entry-header">
+                        <h2 class="title">Dating While Studying Abroad—Maximize Fun, Minimize Heartbreak</h2>
+                        <ul class="post-meta">
+                            <li>September 07 - 2020</li>
+                            <li><a href="#">Design,</a><a href="#">Travel,</a><a href="#">photography</a></li>
+                        </ul>
+                        <p class="short-desc">
+                            When it comes to creating is a website for your busi-ness, an attreactive design will only get
+                            you far. With people increasingly using their tablets and smartphones and website for your
+                            business, an attractive design will only get you far. With people increasingly using their
+                            tablets and smartphones shop online,...
+                        </p>
+                    </div>
+                    <div class="entry-media text-center">
+                        <img th:src="@{sources/images/44.jpg}" alt="image">
+                    </div>
+                    <div class="entry-content">
+                        <p class="has-dropcap">
+                            Adipiscing elit com-modo ligula eget dolor Morlem ipsuim dolor sit amiet nec, isc thua sdfk
+                            onsec tetuer adipi scing elit. Aenean commeod ligula eget dolor Cuem sociis thena toquhte thigp
+                            enatibus et magnis dis partu rient montes. Morlem ipsum doelor sit amet nec penatib et thjem
+                            agnis dis part urient montes. Morlem ipsum dolor sit amet nerc, conseec tetuer adipiscing elit.
+                            Aenean commodo ligulaits eget dolior. Aenean type massa. Cum sociis nato que pena tibus et
+                            magnis dis partu rient moentes. Morlm ipsum dolor tibushrde set amet nec, consec tetuer
+                            adipiscing elit. Aenean commodo ligula eget dolor.
+                        </p>
+                        <p>
+                            Enatibus et magnis dis partu rient montes. Morlem ipsum doelor sit amet nec penatib et thjem
+                            agnis dis part uriet montes. Morlem ipsium dolor sit amet nerc, conseec tetuer adipi scing elit.
+                            Aenean commodo ligulaits eget doilior. Aenean type massa. Cum sociis nato que pena tibus et
+                            magns dihtres partu rient moentes. Morlm ipsum dolor set amet nec, consec tetuer adipiscing
+                            elit. Aenean comiodo ligula eget dolor. magnis dis partu rient moentes. Morlm ipsum dolor set am
+                            nec, consec tetuer adipiscing elit
+                        </p>
+                    </div>
+
+                </div>
+                <div class="comment-template">
+                    <h4 class="template-title">04 Comments</h4>
+
+                    <ul class="comment-list">
+                        <li>
+                            <div class="comment-body">
+                                <div class="comment-author">
+                                    <img th:src="@{sources/images/44.jpg}" alt="image">
+                                </div>
+                                <div class="comment-content">
+                                    <h6 class="comment-author">Zhon Andarson</h6>
+                                    <p>
+                                        Coding is used in almost all aspects of life and work now, be it directly or
+                                        indirectly. It’s not just for companies in the tech sector. “An increasing number of
+                                        businesses rely on computer code,
+                                    </p>
+                                    <div class="comment-footer">
+                                        <span class="date"> 10:35pm, 27 jan 2015.</span>
+                                        <a href="#" class="reply-link">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comment-body">
+                                <div class="comment-author">
+                                    <img th:src="@{sources/images/40.jpg}" alt="image">
+                                </div>
+                                <div class="comment-content">
+                                    <h6 class="comment-author">Andro Smith Doe</h6>
+                                    <p>
+                                        Coding is used in almost all aspects of life and work now, be it directly or
+                                        indirectly. It’s not just for companies in the tech sector. “An increasing number of
+                                        businesses rely on computer code,
+                                    </p>
+                                    <div class="comment-footer">
+                                        <span class="date"> 10:35pm, 27 jan 2015.</span>
+                                        <a href="#" class="reply-link">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4 class="template-title">Leave your comment</h4>
+                    <div class="comment-form">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Enter your name">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" placeholder="Your Email">
+                                </div>
+                                <div class="col-12">
+                                    <textarea placeholder="Your message here"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit">Post <i class="far fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--引用公共底部-->
+        <div th:replace="common :: bottom"></div>
+
+        <script src="lib/js/jquery-3.5.1.js"></script>
+    <!-- popper.js 本地引入有问题，故用cdn方式引入 -->
+        <script th:src="@{lib/js/popper.min.js}"></script>
+        <script th:src="@{lib/js/bootstrap.js}"></script>
+        <script th:src="@{js/home.js}"></script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/njvolunteer?serverTimezone=GMT%2B8
+    username: root
+    password: root
+  thymeleaf:
+    cache: false #禁用缓存
+
+server:
+  port: 80

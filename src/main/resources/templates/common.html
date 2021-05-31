@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>comm pages</title>
+    <link rel="stylesheet" th:href="@{lib/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{css/home.css}">
+</head>
+<body>
+<!------------------------ 头部 header-begin ------------------------------>
+<header id="header_top" th:fragment="header_top">
+    <div class="top-bar d-none d-sm-none d-md-block d-lg-block">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="top-bar col-md-4">
+                    <small class="text-success"><strong>文明河源全民同心，志愿服务你我同行</strong></small>
+                </div>
+                <div class="top-bar col-md-2 ">
+                    <a href="#" class="text-dark">测试</a>
+                </div>
+
+                <div class="top-bar col-md-2"></div>
+                <!--    若未登录，则显示登录，注册按钮            -->
+                <div class="top-bar col-md-3 login_btn" th:if="${session} == null">
+                    <button type="button" class="btn btn-login btn-sm">
+                        <a th:href="@{showLogin}" class="text-white">登录</a>
+                    </button>
+
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <a th:href="@{register}" class="text-dark">注册</a>
+                    </button>
+                </div>
+                <!--    若登录，则显示用户名，退出登录按钮            -->
+                <div  class="top-bar col-md-3 " th:if="${session} != null" th:object="${session}">
+                    <button type="button" class=" btn-info btn-sm">
+                        <!-- ${session.user.getUsername()}必须保证session存在，否则会报错    -->
+                        <a th:href="@{showLogin}" class="text-white" th:text="${session.user.getUsername()}" ></a>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <a th:href="@{logout}" class="text-dark">退出登录</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!------------------------ 头部导航栏 header-begin ------------------------------>
+<header id="header_nav" th:fragment="header_nav">
+    <div class="top_nav">
+        <div class="container-fluid ">
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <!-- Image and text -->
+                <nav class="navbar navbar-light ">
+                    <a class="navbar-brand" href="#">
+                        <img src="sources/images/heart_48x48.png" width="30" height="30"
+                             class="d-inline-block align-top" alt="">
+                        <strong>甜城志愿服务网</strong>
+                    </a>
+                </nav>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{welcome}" target="_self">首页 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" th:href="@{showNews}" target="_self">新闻 </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{showActivities}" target="_self">志愿活动</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">心得交流</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">其他</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            更多
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">关于</a>
+                            <a class="dropdown-item" href="#">其他</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">敬请期待</a>
+                          </div>
+                        </li> -->
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+<!------------------------ 底部 -begin ------------------------------------>
+<footer id="page_bottom" class="bg-dark" th:fragment="bottom">
+    <div class="page_bootom d-flex text-light">
+        @copyright:小蒜科技工作室
+    </div>
+</footer>
+<!------------------------ 底部 -end -------------------------------------->
+
+<script src="lib/js/jquery-3.5.1.js"></script>
+<!-- popper.js 本地引入有问题，故用cdn方式引入 -->
+<script th:src="@{lib/js/popper.min.js}"></script>
+<script th:src="@{lib/js/bootstrap.js}"></script>
+<script th:src="@{js/home.js}"></script>
+
+</body>
+</html>

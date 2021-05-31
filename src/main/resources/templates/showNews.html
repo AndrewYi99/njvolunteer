@@ -1,0 +1,143 @@
+<!doctype html>  <!--加上声明，否则bootstrap可能失真-->
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--响应式布局 必须设置该meta标签-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+      <link rel="stylesheet" th:href="@{lib/css/bootstrap.css}">
+      <link rel="stylesheet" th:href="@{css/artical_style.css}">
+      <link rel="stylesheet" th:href="@{css/home.css}">
+
+    <title>新闻</title>
+    <!-- 站点头图 -->
+    <link rel="icon" type="image/x-ico" href="sources/images/heart_48x48.png"></link>
+  </head>
+  <body>
+  <!--  引用公共头部-->
+  <div th:replace="common :: header_top"></div>
+  <!-- 引用公共导航栏 -->
+  <div th:replace="common :: header_nav"></div>
+    
+    <!-- 文章内容 artical -->
+  <section class="post-area with-sidebar" id="postWarpperLoaded">
+      <div class="container">
+          <div class="post-area-inner">
+              <!-- Entry Post -->
+              <div class="entry-posts clearfix masonary-posts row">
+                  <div class="col-sm-6 col-md-3  col-xl-6">
+                      <div class="entry-post">
+                          <div class="entry-thumbnail">
+                              <img th:src="@{sources/images/40.jpg}" alt="Image" />
+
+                          </div>
+                          <div class="entry-content">
+                              <h4 class="title">
+                                  <a href="blog-details.html">
+                                      Best Wordpress Theme of 2018
+                                  </a>
+                              </h4>
+                              <p>
+                                  When it comes to creating is ,...
+                              </p>
+                              <a th:href="@{posts}" class="read-more">
+                                  Read More <i class="fas fa-long-arrow-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3  col-xl-6">
+                      <div class="entry-post">
+                          <div class="entry-thumbnail">
+                              <img th:src="@{sources/images/40.jpg}" alt="Image" />
+
+                          </div>
+                          <div class="entry-content">
+                              <h4 class="title">
+                                  <a href="blog-details.html">
+                                      Best Wordpress Theme of 2018
+                                  </a>
+                              </h4>
+                              <p>
+                                  When it comes to creating is ,...
+                              </p>
+                              <a href="blog-details.html" class="read-more">
+                                  Read More <i class="fas fa-long-arrow-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-3  col-xl-6">
+                      <div class="entry-post">
+                          <div class="entry-thumbnail">
+                              <img th:src="@{sources/images/40.jpg}" alt="Image" />
+
+                          </div>
+                          <div class="entry-content">
+                              <h4 class="title">
+                                  <a href="blog-details.html">
+                                      Best Wordpress Theme of 2018
+                                  </a>
+                              </h4>
+                              <p>
+                                  When it comes to creating is ,...
+                              </p>
+                              <a href="blog-details.html" class="read-more">
+                                  Read More <i class="fas fa-long-arrow-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3  col-xl-6">
+                      <div class="entry-post">
+                          <div class="entry-thumbnail">
+                              <img th:src="@{sources/images/40.jpg}" alt="Image" />
+
+                          </div>
+                          <div class="entry-content">
+                              <h4 class="title">
+                                  <a href="blog-details.html">
+                                      Best Wordpress Theme of 2018
+                                  </a>
+                              </h4>
+                              <p>
+                                  When it comes to creating is ,...
+                              </p>
+                              <a href="blog-details.html" class="read-more">
+                                  Read More <i class="fas fa-long-arrow-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                      <div class="text-center">
+                          <a href="#" class="load-more-btn">Load More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+   <!------------------------ 底部 -begin ------------------------------------>
+   <footer id="page_bottom" class="bg-dark">
+     <div class="page_bootom d-flex text-light">
+       @copyright:小蒜科技工作室
+     </div>
+   </footer>
+   <!------------------------ 底部 -end -------------------------------------->
+
+    <script src="lib/js/jquery-3.5.1.js" ></script>
+    <!-- popper.js 本地引入有问题，故用cdn方式引入 -->
+    <script th:src="@{lib/js/popper.min.js}"></script>
+    <script th:src="@{lib/js/bootstrap.js}"></script>
+    <script th:src="@{js/home.js}"></script>
+
+
+
+
+  </body>
+</html>

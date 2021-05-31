@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--响应式布局 必须设置该meta标签-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" th:href="@{lib/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{css/home.css}">
+    <title>活动页</title>
+    <!-- 站点头图 -->
+    <link rel="icon" type="image/x-ico" th:href="@{sources/images/heart_48x48.png}"></link>
+</head>
+<body>
+    <!--  引用公共头部-->
+    <div th:replace="common :: header_top"></div>
+    <!-- 引用公共导航栏 -->
+    <div th:replace="common :: header_nav"></div>
+    <!-- 活动页    -->
+
+    <!-- 公共底部    -->
+    <div th:replace="common :: bottom"></div>
+
+    <script src="lib/js/jquery-3.5.1.js" ></script>
+    <script th:src="@{lib/js/popper.min.js}"></script>
+    <script th:src="@{lib/js/bootstrap.js}"></script>
+    <script th:src="@{js/home.js}"></script>
+</body>
+</html>

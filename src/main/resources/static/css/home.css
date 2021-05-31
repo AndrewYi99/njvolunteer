@@ -1,0 +1,241 @@
+/**************通用样式 begin*******************/
+body{
+    /*columns: #000000;*/
+    font-family: 'Courier New', Courier, monospace;
+    height:auto;
+    overflow: scroll;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+uo,ol{
+    list-style: none;
+}
+
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE  #FFFFFF;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0px;
+    }
+    
+
+
+/**************通用样式 end********************/
+
+/**************头部样式 begin*******************/
+/* #header_top{
+    background-color: red; 
+} */
+
+#header_top .top-bar{
+    text-align: center;
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+    
+}
+#header_top .top-bar .container .row >div +div{
+    border-left: 1px solid #e0e0e0;
+}
+
+#header_top > div > div > div > div.top-bar.col-md-3.login_btn{
+    text-align: right;
+    
+}
+
+/**************头部 end********************/
+
+
+/**************导航栏样式 begin*******************/
+ #header_nav{
+    height:70px;
+} 
+
+/* #header_nav .top_nav .container >nav{
+    
+     border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0; 
+     box-shadow: 0 2px 6px rgba(0,0,0,.1); 
+} */
+
+/* #navbarSupportedContent{
+    
+} */
+#navbarSupportedContent > ul > li{
+    height: 50px;
+    
+}
+
+#navbarSupportedContent > ul > li > a{
+    height: 48px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right:40px ;
+}
+#navbarSupportedContent > ul > li > a:hover{
+    border-bottom: 2px solid purple;
+}
+
+.fixnav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+/**************头部 end********************/
+
+
+/**************轮播图样式 begin*******************/
+/* #page_carousel{
+    background-color: aqua; 
+} */
+#page_carousel .carousel-item{
+    background: no-repeat center center;
+    -webkit-background-size:cover;
+    background-size: cover;
+}
+#page_carousel .carousel-item image{
+    width: 100%;
+    
+}
+@media screen and (min-width:900px){
+    #page_carousel .carousel-item{
+        height: 500px;
+        border: 1px solid #e0e0e0;
+    }
+}
+/**************轮播图样式 end********************/
+.line{
+    background: url(../sources/images/cut.png);
+    margin-top: 40px;
+    width: 1080px;
+    height: 20px;
+    clear: both;
+}
+/**************新闻样式 begin*******************/
+/* #page_news{
+    background-color: blue;
+} */
+
+
+
+/**************新闻样式 end********************/
+
+/**************通知样式 begin*******************/
+/* #info{
+    background-color: pink;
+} */
+
+
+/**************通知样式 end********************/
+
+
+
+
+/**************活动样式 begin*******************/
+
+/* #actives{
+    background-color: green;
+} */
+
+/**************活动样式 end********************/
+
+/**************照片墙样式 begin*******************/
+
+/* #pictures_wall{
+    background-color: green;
+} */
+
+
+#pictures_wall .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+#pictures_wall .list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+  }
+
+  #pictures_wall .list-item:hover .item-image::before {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  #pictures_wall .item-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(-50px) scale(2.4);
+  }
+  
+  #pictures_wall .item-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  #pictures_wall .item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #pictures_wall .item-text {
+    color: #ffffff;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
+  
+.text-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+  }
+  
+.text-desc {
+    font-size: 1.2rem;
+  }
+  
+/**************照片墙样式 end********************/
+
+
+/**************底部样式 begin*******************/
+#page_bottom{
+    width: 100%;
+    height: 70px;
+    
+}
+/* #page_bottom .page_bottom{
+    
+} */
+#page_bottom > div{
+    justify-content: center;
+    
+}
+/**************底部样式 end********************/
