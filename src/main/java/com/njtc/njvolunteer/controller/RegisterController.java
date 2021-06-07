@@ -23,6 +23,8 @@ public class RegisterController {
         model.addAttribute("user",new User());
         return "login";
     }
+
+
     @PostMapping("/registercheck")
     public String registercheck(HttpServletRequest request, HttpServletResponse response){
         String username=request.getParameter("username");

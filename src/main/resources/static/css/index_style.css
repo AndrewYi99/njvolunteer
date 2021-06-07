@@ -1,0 +1,87 @@
+.card {
+    border: none;
+}
+.card .card-img {
+    height: 250px;
+    object-fit: cover;
+}
+.card .card-text {
+    margin-bottom: 20px;
+}
+.recent-posts {
+    margin-top: -40px;
+}
+
+
+.card,
+.card-img,
+.card-img-top {
+    border-radius: 0;
+}
+.sidebar-title {
+    font-family: "poppins", sans-serif;
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.sidebar-title h5 {
+    font-weight: 600;
+}
+.sidebar-title i {
+    font-size: 10px;
+    color: #303c6c;
+    padding: 5px;
+}
+.card-text {
+    color: #666;
+}
+.card-img,
+.card-img-top {
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    width: 100%;
+    object-fit: cover;
+}
+.card-img:hover,
+.card-img-top:hover {
+    opacity: 0.9;
+}
+.card-500 .card-img {
+    height: 500px;
+}
+.card-350 .card-img,
+.card-350 .card-img-top {
+    height: 350px;
+}
+.category-tag-list {
+    margin-bottom: 5px;
+}
+
+.author-date {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-style: italic;
+    font-family: "Lora", serif;
+    justify-content: space-between;
+}
+.author-date a {
+    color: #666;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+}
+.author-date a:hover {
+    color: #000;
+}
+.author-date .author img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+}

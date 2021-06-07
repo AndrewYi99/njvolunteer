@@ -16,12 +16,12 @@
                     <small class="text-success"><strong>文明河源全民同心，志愿服务你我同行</strong></small>
                 </div>
                 <div class="top-bar col-md-2 ">
-                    <a href="#" class="text-dark">测试</a>
+
                 </div>
 
                 <div class="top-bar col-md-2"></div>
                 <!--    若未登录，则显示登录，注册按钮            -->
-                <div class="top-bar col-md-3 login_btn" th:if="${session} == null">
+                <div class="top-bar col-md-3 login_btn" th:if="${session.user} == null">
                     <button type="button" class="btn btn-login btn-sm">
                         <a th:href="@{showLogin}" class="text-white">登录</a>
                     </button>
@@ -31,7 +31,7 @@
                     </button>
                 </div>
                 <!--    若登录，则显示用户名，退出登录按钮            -->
-                <div  class="top-bar col-md-3 " th:if="${session} != null" th:object="${session}">
+                <div  class="top-bar col-md-3 " th:if="${session.user} != null" >
                     <button type="button" class=" btn-info btn-sm">
                         <!-- ${session.user.getUsername()}必须保证session存在，否则会报错    -->
                         <a th:href="@{showLogin}" class="text-white" th:text="${session.user.getUsername()}" ></a>
@@ -76,10 +76,10 @@
                             <a class="nav-link" th:href="@{showActivities}" target="_self">志愿活动</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">心得交流</a>
+                            <a class="nav-link" th:href="@{shareIdea}">心得交流</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">其他</a>
+                            <a class="nav-link" th:href="@{showMessage}">收件箱</a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

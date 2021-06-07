@@ -1,6 +1,6 @@
 <!doctype html>  <!--加上声明，否则bootstrap可能失真-->
 <html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <!--响应式布局 必须设置该meta标签-->
@@ -9,333 +9,404 @@
 
     <link rel="stylesheet" th:href="@{lib/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{css/home.css}">
+    <link rel="stylesheet" th:href="@{css/index_style.css}">
     <title>甜城志愿网</title>
     <!-- 站点头图 -->
     <link rel="icon" type="image/x-ico" th:href="@{sources/images/heart_48x48.png}"></link>
-  </head>
-  <body>
-  <!--  引用公共头部-->
-  <div th:replace="common :: header_top"></div>
-  <!-- 引用公共导航栏 -->
-  <div th:replace="common :: header_nav"></div>
+</head>
+<body>
+<!--  引用公共头部-->
+<div th:replace="common :: header_top"></div>
+<!-- 引用公共导航栏 -->
+<div th:replace="common :: header_nav"></div>
 
 
-    <!------------------------ 轮播图 -begin ---------------------------------->
-    <section id="page_carousel"  class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+<!------------------------ 轮播图 -begin ---------------------------------->
+<section id="page_carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
         <li data-target="#page_carousel" data-slide-to="0" class="active"></li>
         <li data-target="#page_carousel" data-slide-to="1"></li>
         <li data-target="#page_carousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active " data-sm-img="sources/images/1_900x410.jpg" data-lg-img="sources/images/40.jpg">
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active " data-sm-img="sources/index_img/head1.jpg"
+             data-lg-img="sources/index_img/head1.jpg">
         </div>
-        <div class="carousel-item" data-sm-img="sources/images/2_900x410.jpg" data-lg-img="sources/images/41.jpg">
-          
+        <div class="carousel-item" data-sm-img="sources/index_img/head2.jpg" data-lg-img="sources/index_img/head2.jpg">
+
         </div>
-        <div class="carousel-item" data-sm-img="sources/images/3_900x410.jpg" data-lg-img="sources/images/42.jpg">
+        <div class="carousel-item" data-sm-img="sources/index_img/head3.jpg" data-lg-img="sources/index_img/head3.jpg">
         </div>
-      </div>
-      <a class="carousel-control-prev" href="#page_carousel" role="button" data-slide="prev">
+
+    </div>
+    <a class="carousel-control-prev" href="#page_carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#page_carousel" role="button" data-slide="next">
+    </a>
+    <a class="carousel-control-next" href="#page_carousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
-    </section>
-    <!------------------------ 轮播图 -end ------------------------------------>
+    </a>
+</section>
+<!------------------------ 轮播图 -end ------------------------------------>
 
-    <!------------------------ 分割图  begin------------------------------------>
+<!------------------------ 分割图  begin------------------------------------>
 <div class="container">
     <div class="row">
         <div class="col line align-content-center">
         </div>
     </div>
 </div>
-    <!------------------------ 分割图  end------------------------------------>
+<!------------------------ 分割图  end------------------------------------>
 
-    <!------------------------ 新闻 -begin ------------------------------------>
-    <section id="page_news">
-      <div class="news">
-        <div class="container-fluid">
-          <h3 class="display-3">新闻News</h3>
-          <hr>
-            <div class="row ">
-                <div class="col-4">
-                  <figure class="figure">
-                    <img src="sources/images/1_900x410.jpg" class="figure-img img-fluid rounded w-90" alt="...">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                  </figure>
-                </div>
-                <div class="col-8">
-                  <div class="list-group ">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start " style="height: 200px;">
-                      <div class="d-flex w-100   justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small>3 days ago</small>
-                      </div>
-                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                      <small>Donec id elit non mi porta.</small>
-                    </a>
-                  </div>
-                </div>
-            </div>
-<br>
+<!------------------------ 新闻 -begin ------------------------------------>
+<section id="page_news">
+    <div class="news">
+        <div class="container">
+            <h3 class="display-3">新闻News</h3>
+            <hr/>
             <div class="row">
-              <div class="col-8">
-                <div class="list-group ">
-                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start " style="height: 200px;">
-                    <div class="d-flex w-100   justify-content-between">
-                      <h5 class="mb-1">List group item heading</h5>
-                      <small>3 days ago</small>
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <img src="sources/index_img/block_1.jpg" class="card-img" alt=""
+                                    /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <ul class="category-tag-list">
+                                        <li class="category-tag-name" style="list-style-type: none"><a href="#">志愿者</a></li>
+                                    </ul>
+                                    <h5 class="card-title title-font">
+                                        <a href="#">援外医生，远在异乡的坚守</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        2017年7月，北京朝阳医院派出了第二十六批中国援几医疗队，在几内亚首都的中几友好医院工作...
+                                    </p>
+                                    <p></p>
+                                    <div class="author-date">
+                                        <a class="author" href="#"
+                                        ><img
+                                                src="sources/index_img/auther.png"
+                                                alt=""
+                                                class="rounded-circle"
+                                        /><span class="writer-name-small">admin</span></a
+                                        ><a class="date" href="#"><span>2020.11.1</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small>Donec id elit non mi porta.</small>
-                  </a>
+                    <div class="card mb-4">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <img src="sources/index_img/6.jpg" class="card-img" alt=""
+                                    /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <ul class="category-tag-list">
+                                        <li class="category-tag-name" style="list-style-type: none"><a href="#">志愿者</a></li>
+                                    </ul>
+                                    <h5 class="card-title title-font">
+                                        <a href="#">一名90后“西部计划志愿者”的责任人生</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        “生在井冈山、长在南泥湾，转战数万里、屯垦在天山……”
+                                    </p>
+                                    <p></p>
+                                    <div class="author-date">
+                                        <a class="author" href="#"
+                                        ><img
+                                                src="sources/index_img/auther.png"
+                                                alt=""
+                                                class="rounded-circle"
+                                        /><span class="writer-name-small">admin</span></a
+                                        ><a class="date" href="#"><span>2020.11.1</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <img src="sources/index_img/7.jpg" class="card-img" alt=""
+                                    /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <ul class="category-tag-list">
+                                        <li class="category-tag-name" style="list-style-type: none"><a href="#">志愿者</a></li>
+                                    </ul>
+                                    <h5 class="card-title title-font">
+                                        <a href="#">“一支永不撤走的青年医疗队”</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        20年来，中国青年卫生志愿者扶贫接力计划为各地留下了“一支永不撤走的青年医疗队”。...
+                                    </p>
+                                    <p></p>
+                                    <div class="author-date">
+                                        <a class="author" href="#"
+                                        ><img
+                                                src="sources/index_img/auther.png"
+                                                alt=""
+                                                class="rounded-circle"
+                                        /><span class="writer-name-small">admin</span></a
+                                        ><a class="date" href="#"><span>2020.11.1</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-4">
-                <figure class="figure">
-                  <img src="sources/images/1_900x410.jpg" class="figure-img img-fluid rounded w-90" alt="...">
-                  <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
-              </div>
-
-          </div>
+            </div>
         </div>
-      </div>
-    </section>
-        <!------------------------ 分割图  begin------------------------------------>
+    </div>
+</section>
+
+<!------------------------ 分割图  begin------------------------------------>
 <div class="container">
-  <div class="row">
-      <div class="col line align-content-center">
-      </div>
-  </div>
+    <div class="row">
+        <div class="col line align-content-center">
+        </div>
+    </div>
 </div>
-  <!------------------------ 分割图  end------------------------------------>
-    <section>
-      <div class="container-fluid">
-        <h3 class="display-3" style="text-align:right">资讯Info</h3>
+<!------------------------ 分割图  end------------------------------------>
+<section>
+    <div class="container-fluid">
+        <h3 class="display-3" style="text-align:center">资讯Info</h3>
         <hr>
 
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section id="info">
-      <div class="container">
+<section id="info">
+    <div class="container">
         <div class="row">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">类型</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">服务时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>志愿者</td>
+                    <td>熊德运</td>
+                    <td>5318.5 h</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>志愿者</td>
+                    <td>杜蔷薇</td>
+                    <td>5062.5 h</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>志愿者</td>
+                    <td>刘聪博</td>
+                    <td>5053.5 h</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container-fluid">
+    </div>
+</section>
+<!--图片展示页-->
+<section>
+    <div class="container">
         <div class="row">
-          <div class="card-columns">
-            <div class="card shadow">
-              <img class="card-img-top" src="sources/images/44.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">图片标题</h5>
-                <p class="card-text">卡片内容</p>
-              </div>
-            </div>
+            <div class="card-columns">
+                <div class="card shadow">
+                    <img class="card-img-top" src="sources/index_img/block_1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">援外医生，远在异乡的坚守</h5>
+                        <p class="card-text">临出国前，医疗队队员家属与队员们依依不舍</p>
+                    </div>
+                </div>
 
-            <div class="card p-3 shadow-sm">
-              <blockquote class="blockquote mb-0 card-body">
-                <p>卡片</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    根据内容扩展宽高 <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
+                <!--            <div class="card p-3 shadow-sm">-->
+                <!--              <blockquote class="blockquote mb-0 card-body">-->
+                <!--                <p>卡片</p>-->
+                <!--                <footer class="blockquote-footer">-->
+                <!--                  <small class="text-muted">-->
+                <!--                    根据内容扩展宽高 <cite title="Source Title">Source Title</cite>-->
+                <!--                  </small>-->
+                <!--                </footer>-->
+                <!--              </blockquote>-->
+                <!--            </div>-->
 
-            
-            <div class="card ">
-              <img class="card-img-top" src="sources/images/42.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">图片标题2 </h5>
-                <p class="card-text">图片内容</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
 
-            <div class="card bg-warning text-white text-center p-3 shadow-lg">
-              <blockquote class="blockquote mb-0">
-                <p>中心卡片内容</p>
-                <footer class="blockquote-footer">
-                  <small>
-                    内容 <cite title="Source Title">卡片标题</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
+                <div class="card">
+                    <img class="card-img-top" src="sources/index_img/block_2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">援外医生，远在异乡的坚守（2） </h5>
+                        <p class="card-text"><small class="text-muted">医疗队慰问在与埃博拉病毒斗争中牺牲的几内亚医护人员家属。</small></p>
+                    </div>
+                </div>
 
-            <div class="card text-center">
-              <div class="card-body">
-                <h5 class="card-title">卡片标题3</h5>
-                <p class="card-text">卡片文字内容</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+                <!--            <div class="card bg-warning text-white text-center p-3 shadow-lg">-->
+                <!--              <blockquote class="blockquote mb-0">-->
+                <!--                <p>中心卡片内容</p>-->
+                <!--                <footer class="blockquote-footer">-->
+                <!--                  <small>-->
+                <!--                    内容 <cite title="Source Title">卡片标题</cite>-->
+                <!--                  </small>-->
+                <!--                </footer>-->
+                <!--              </blockquote>-->
+                <!--            </div>-->
 
-            <div class="card">
-              <img class="card-img" src="sources/images/40.jpg" alt="单独的一个图片">
-            </div>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">志愿者口号</h5>
+                        <p class="card-text">弘扬爱心精神，为社会上需要帮助的人贡献—份力量。
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+                    </div>
+                </div>
 
-            <div class="card p-3 text-right shadow-sm">
-              <blockquote class="blockquote mb-0">
-                <p>单独的卡片内容</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
+                <div class="card text-black-50">
+                    <img class="card-img" src="sources/index_img/block_4.jpg" alt="单独的一个图片">
+                </div>
 
-            <div class="card shadow">
-              <div class="card-body">
-                <h5 class="card-title">卡片标题4</h5>
-                <p class="card-text">卡片内容</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+                <div class="card p-3 text-right shadow-sm">
+                    <blockquote class="blockquote mb-0">
+                        <p>丹麦街头"身材矮小"的垃圾桶很暖心</p>
+                        <footer class="blockquote-footer">
+                            <small class="text-muted">
+                                为了方便骑车的孩纸随手扔垃圾...毕竟丹麦骑自行车的人太多
+                            </small>
+                        </footer>
+                    </blockquote>
+                </div>
 
-          </div>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">志愿者精神</h5>
+                        <p class="card-text">团结、实干、求知、创新;奉献、友爱、互助、进步。
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
+    </div>
 
-    </section>
-    <!------------------------ 新闻 -end -------------------------------------->
-  
- <!------------------------ 分割图  begin------------------------------------>
- <div class="container">
-  <div class="row">
-      <div class="col line align-content-center">
-      </div>
-  </div>
+</section>
+<!------------------------ 新闻 -end -------------------------------------->
+
+<!------------------------ 分割图  begin------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col line align-content-center">
+        </div>
+    </div>
 </div>
-  <!------------------------ 分割图  end------------------------------------>
-    <section>
-      <div class="container-fluid">
-        <h3 class="display-3" style="text-align:center">活动Active</h3>
+<!------------------------ 分割图  end------------------------------------>
+<section>
+    <div class="container-fluid">
+        <h3 class="display-3" style="text-align:center">志愿者活动Active</h3>
         <hr>
 
-      </div>
-    </section>
-    <!------------------------ 活动 -begin ------------------------------------>
-    <section id="actives">
-      <div class="container">
-          <div class="row">
+    </div>
+</section>
+<!------------------------ 活动 -begin ------------------------------------>
+<section id="actives">
+    <div class="container">
+        <div class="row">
             <div class="card-group col-lg-3">
-              <div class="card ml-2 mb-2">
-                <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="#" class="btn btn-primary">Start</a>
+                <div class="card ml-2 mb-2">
+                    <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">志愿活动</h5>
+                        <p class="card-text">打扫社区卫生</p>
+                        <p class="card-text">地点:双财镇敬老院</p>
+                        <p class="card-text">日期:<small class="text-muted">2021.04.01</small></p>
+                        <p class="card-text">时间:<small class="text-muted">上午9点-下午6点</small></p>
+                        <a href="#" class="btn btn-primary">加入</a>
+                    </div>
                 </div>
-              </div>
-            </div>
-           
-            <div class="card-group col-3">
-              <div class="card ml-2 mb-2">
-                <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="#" class="btn btn-primary">Start</a>
-                </div>
-              </div>
             </div>
 
-            <div class="card-group col-3">
-              <div class="card ml-2 mb-2">
-                <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="#" class="btn btn-primary">Start</a>
+            <div class="card-group col-lg-3">
+                <div class="card ml-2 mb-2">
+                    <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">志愿活动</h5>
+                        <p class="card-text">无偿献血</p>
+                        <p class="card-text">地点:内江师范学院-游泳池</p>
+                        <p class="card-text">日期:<small class="text-muted">2021.04.05</small></p>
+                        <p class="card-text">时间:<small class="text-muted">上午9点-下午6点</small></p>
+                        <a href="#" class="btn btn-primary">加入</a>
+                    </div>
                 </div>
-              </div>
             </div>
 
-            <div class="card-group col-3">
-              <div class="card ml-2 mb-2">
-                <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <a href="#" class="btn btn-primary">Start</a>
+            <div class="card-group col-lg-3">
+                <div class="card ml-2 mb-2">
+                    <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">志愿活动</h5>
+                        <p class="card-text">辅导社区学生做作业</p>
+                        <p class="card-text">地点:内江师范学院-五教</p>
+                        <p class="card-text">日期:<small class="text-muted">2021.04.10</small></p>
+                        <p class="card-text">时间:<small class="text-muted">上午9点-下午6点</small></p>
+                        <a href="#" class="btn btn-primary">加入</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-      </div>
-    </section>
-    <!------------------------ 活动 -end -------------------------------------->
- <!------------------------ 分割图  begin------------------------------------>
- <div class="container">
-  <div class="row">
-      <div class="col line align-content-center">
-      </div>
-  </div>
+
+            <div class="card-group col-lg-3">
+                <div class="card ml-2 mb-2">
+                    <img class="card-img-top" src="sources/images/41.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">志愿活动</h5>
+                        <p class="card-text">扫墓</p>
+                        <p class="card-text">地点:烈士公墓</p>
+                        <p class="card-text">日期:<small class="text-muted">2021.04.15</small></p>
+                        <p class="card-text">时间:<small class="text-muted">上午9点-下午3点</small></p>
+                        <a href="#" class="btn btn-primary">加入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!------------------------ 活动 -end -------------------------------------->
+<!------------------------ 分割图  begin------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col line align-content-center">
+        </div>
+    </div>
 </div>
-  <!------------------------ 分割图  end------------------------------------>
-    <!-- <section>
-      <div class="container-fluid">
-        <h3 class="display-3" style="text-align:center">记录Photographs</h3>
-        <hr>
+<!------------------------ 分割图  end------------------------------------>
+<!-- <section>
+  <div class="container-fluid">
+    <h3 class="display-3" style="text-align:center">记录Photographs</h3>
+    <hr>
 
-      </div>
-    </section> -->
-    <!------------------------ 照片墙 -begin ---------------------------------->
+  </div>
+</section> -->
+<!------------------------ 照片墙 -begin ---------------------------------->
 
-    <!------------------------ 照片墙 -end ------------------------------------>
+<!------------------------ 照片墙 -end ------------------------------------>
 
 
-  <div th:replace="common :: bottom"></div>
-    <script src="lib/js/jquery-3.5.1.js" ></script>
-    <!-- popper.js 本地引入有问题，故用cdn方式引入 -->
-    <script th:src="@{lib/js/popper.min.js}"></script>
-    <script th:src="@{lib/js/bootstrap.js}"></script>
-    <script th:src="@{js/home.js}"></script>
-  </body>
+<div th:replace="common :: bottom"></div>
+<script src="lib/js/jquery-3.5.1.js"></script>
+<!-- popper.js 本地引入有问题，故用cdn方式引入 -->
+<script th:src="@{lib/js/popper.min.js}"></script>
+<script th:src="@{lib/js/bootstrap.js}"></script>
+<script th:src="@{js/home.js}"></script>
+</body>
 </html>

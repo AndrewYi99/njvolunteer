@@ -34,10 +34,7 @@ public class loginController {
         user.setPassword(password);
         User db_User = userMapper.selectUser(user);
         if (db_User != null) {
-            String token = db_User.getToken();
-            response.addCookie(new Cookie("token", token));
-
-
+            request.getSession().setAttribute("user", db_User);
         } else {
 
             return "login";
@@ -69,10 +66,6 @@ public class loginController {
     public String logout(HttpServletRequest request,
                          HttpServletResponse response, HttpSession session) {
         request.getSession().removeAttribute("user");
-        Cookie cookie = new Cookie("token", null);
-        cookie.setMaxAge(0);
-        response.addCookie(cookie);
-        System.out.println(session);
-        return "redirect:/login";
+        return "redirect:/index.html";
     }
 }

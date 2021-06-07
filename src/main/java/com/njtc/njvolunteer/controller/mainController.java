@@ -68,4 +68,19 @@ public class mainController {
         return "activities";
     }
 
+    @RequestMapping("/shareIdea")
+    public String showSareIdea(){
+        return "shareIdea";
+    }
+
+    @RequestMapping("/showMessage")
+    public String showMessage(){
+        return "message";
+    }
+
+    @RequestMapping("/shareIdea_detail")
+    public String showDetail(){
+        return "shareIdea_detail";
+    }
+
 }
